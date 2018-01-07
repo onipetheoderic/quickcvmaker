@@ -1,7 +1,6 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A website creating for making your CV quickly:
+languages used: Ruby on Rails, Postgresql, Jquery, Javascript, Ajax, Css3, Html5, Sass, jqueryujs, coffeescript......
 
 Things you may want to cover:
 
