@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>layout</title>
+
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style type="text/css">
+	/**********
+/* Grille - 960.gs
+**********/
+.container_16 {
+	max-width: 960px;
+	width: 92%;
+	margin: 0 auto;
+}
+.grid_6,
+.grid_8,
+.grid_10,
+.grid_16 {
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+.container_16 .grid_6 {
+	width:35.5%;
+}
+
+.container_16 .grid_8 {
+	width:48.0%;
+}
+
+.container_16 .grid_10 {
+	width:60.5%;
+}
+
+.container_16 .grid_16 {
+	width:98.0%;
+}
+
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+
+
+
+/**********
+/* Header
+**********/
+	header[role=banner] {
+		background:#fff;
+		border-bottom:4px solid #33a4c9;
+		padding: 6px 0;
+		overflow: hidden;
+	}
+	
+	
+	
+	header figure img {
+		border-radius: 75px;
+		height: 150px;
+		position: relative;
+		width: 150px;
+	}
+	
+	header hgroup {
+		float: left;
+		padding: 20px 0;
+	}
+	
+	header hgroup h1 {
+		color:#555;
+		font-family:'DroidSansBold', Arial, sans-serif;
+	}
+	
+	header hgroup h2 {
+		color:#cecece;
+		font-style: italic;
+		text-shadow: 1px 1px 0 rgba(0,0,0,.3);
+	}
+
+/************
+/* Contact
+************/
+	::-webkit-input-placeholder  { color:#fff; }
+	input:-moz-placeholder { color:#fff; }
+	.placeholder { color: #fff; }
+
+	.contactform {
+		background-color: #33a4c9;
+		color: #fff;
+		display: none;
+	}
+	
+	.contactform > div {
+		padding: 21px 0;
+	}
+	
+	.contactform input[type=text], .contactform input[type=email], .contactform textarea {
+		background: #2983a0;
+		border: 1px solid #226d85;
+		border-radius: 2px;
+		color: #fff;
+		max-width: 100%;
+		opacity: .7;
+		padding: 10px 10px 9px 10px;
+		margin-top: 0;
+		position: relative;
+		vertical-align: top;
+		width: 100%;
+	}
+	
+	.contactform input[type=text], .contactform input[type=email] {
+		margin-bottom: 21px;
+	}
+	
+	.contactform textarea {
+		font-family: 'DroidSansRegular', Arial, sans-serif;
+		font-size: 14px;
+		height: 148px;
+	}
+	
+	.contactform input[type=text]:focus, .contactform input[type=email]:focus, .contactform textarea:focus {
+		border: 1px solid #226d85;
+		opacity: 1;
+		outline: none;
+		-webkit-transition: opacity 1s;
+	}
+	
+	.contactform input[type=submit] {
+		background: #ff9f39;
+		border: 1px solid #ff9f39;
+		border-radius: 2px;
+		color: #fff;
+		cursor: pointer;
+		font-weight: bold;
+		font-size: 14px;
+		margin: 0;
+		padding: 10px 10px 9px 10px;
+		width: 100%;
+	}
+	
+	.contactform input.error, .contactform textarea.error {
+		border: 1px solid red;
+	}
+	
+	.contactform label.error {
+		display: none !important;
+	}
+
+	/***********************
+	/* Message du formulaire
+	***********************/
+		.messageform { 
+			display: none; /* Affiché via jQuery */ 
+			border-radius: 2px; 
+			font-size: 14px;
+			font-weight: bold;
+			line-height: 17px;
+			padding:10px 10px 9px 10px; 
+			margin: 0;
+			text-align: center;
+			width: 100%; 
+		}
+		.envoi-valid, .envoi-error { 
+			display: inline-block; 
+		 }
+		.envoi-valid { 
+			background-color: #31D869;
+			border:1px solid #108D3A; 
+			color: #108D3A;
+		}
+		.envoi-error { 
+			background-color: #FF5839;
+			border:1px solid #A62913; 
+			color: #A62913;
+		}
+		.envoi-error a {
+			color: #A62913;
+			text-decoration: underline;
+		}
+		
+
+/***************
+/* Corps - Main
+***************/
+	section[role=main] {
+		padding: 21px 0;
+		overflow: hidden;
+	}
+	
+	section[role=main] > div {
+		margin-top: 63px;
+	}
+	
+	section[role=main] h3 {
+		border-bottom: 1px solid #e1e1e1;
+		padding: 0 0 20px 60px;
+		margin-top: 0px;
+		position: relative;
+ 	}
+	
+	section[role=main] h3:after, h3:before {
+		content: ' ';
+		display: block;
+		height: 50px;
+		left: 0;
+		position: absolute;
+		top: -15px;
+		width: 50px;
+	}
+	
+	section[role=main] h3:before {
+		background-color: #33a4c9;
+		border-radius: 25px;
+	}
+	
+		/***************
+		/* Pictos titres
+		***************/
+		
+		section[role=main] h3:after {
+			background:url('../img/pictos-titre.png') no-repeat 11px 10px;
+		}
+		
+		section[role=main] .competences h3:after {
+			background-position: 11px -34px;
+		}
+	
+		section[role=main] .experiences h3:after {
+			background-position: 11px -86px;
+		}
+		
+		section[role=main] .formations h3:after {
+			background-position: 10px -139px;
+		}
+		
+		section[role=main] .loisirs h3:after {
+			background-position: 10px -250px;
+		}
+		
+		section[role=main] .contact h3:after {
+			background-position: 11px -194px;
+		}
+	
+	
+	.experiences ul, .formations ul {
+		margin-left: 60px;
+	}
+	
+	section[role=main] h4 {
+		margin-bottom: 0px;
+	}
+	
+	section[role=main] h4 strong {
+		color: #147393;
+		font-weight: normal;
+	}
+	
+	.experiences li, .formations li {
+		margin-bottom: 63px;
+	}
+	
+	.experiences li:last-child, .formations li:last-child {
+		margin-bottom: 21px;
+	}
+	
+	.experiences li p, .formations li p {
+		margin-left: 30px;
+	}
+	
+	/**********************************************
+	/* Affichage des compétences sous forme de tags
+	**********************************************/
+	.competences .tags li {
+		background-color:#33a4c9;
+		border:1px solid #1b91b7;
+		border-radius: 15px;
+		color:#fff;
+		display: inline-block;
+		line-height: 13px;
+		margin: 0 7px 17px 0;
+		padding: 5px 10px;
+	}
+	
+	/************************************************
+	/* Affichage des compétences sous forme de barres
+	*************************************************/
+	.competences .barres li {
+		margin-bottom: 21px;
+		position: relative;
+	}
+	
+	.competences .barres li:after {
+		background: #e1e1e1;
+		bottom: -4px;
+		content: ' ';
+		display: block;
+		height: 5px;
+		position: absolute;
+		width:100%;
+	}
+	
+	.competences .barres li span {
+		background: #33a4c9;
+		bottom: -4px;
+		content: ' ';
+		display: block;
+		height: 5px;
+		left: 0;
+		position: absolute;
+		width: inherit;
+		z-index: 1;
+	}
+	
+	
+	/***********
+	/* Pictos
+	***********/
+	.lieu, .dates, .phone, .mail, .site, .form, .twitter, .facebook, .dribbble, .skype {
+		background: url('../img/pictos-gris.png') no-repeat;
+		padding-left: 25px;
+		margin: 0 10px 1px 10px;
+	}
+	
+	.lieu {
+		background-position: 0 -2px;
+		color: #999;
+	}
+	
+	.dates {
+		background-position: 0 -22px;
+		color: #999;
+	}
+	
+	.phone {
+		background-position: 0 -40px;
+	}
+	
+	.mail {
+		background-position: 0 -58px;
+	}
+	
+	.site {
+		background-position: 0 -80px;
+	}
+	
+	.form {
+		background-position: 0 -100px;
+	}
+	
+	.twitter {
+		background-position: 0 -122px;
+	}
+	
+	.facebook {
+		background-position: 0 -140px;
+	}
+	
+	.dribbble {
+		background-position: 0 -160px;
+	}
+	
+	.skype {
+		background-position: 0 -180px;
+	}
+</style>
+<!--[if lt IE 9]> 
+	<link rel="stylesheet" href="css/cv.css" media="screen">
+<![endif]-->
+
+</head>
+
+<body>
+
+
+	<!-- Header -->
+	<header role="banner">
+		<div class="container_16">
+				<hgroup>
+					<h1><%= best_in_place @detail, :header %></h1>
+                    <h2><%= best_in_place @detail, :subheader %></h2>
+				</hgroup>
+
+				
+		</div>
+	</header>
+	
+	
+	
+	<!-- Corps -->
+	<section role="main" class="container_16 clearfix">
+		<div class="grid_16">
+			<!-- A propos -->
+			<div class="grid_8 apropos">
+				<h3><%= best_in_place @detail, :label1 %></h3>
+				<p><%= best_in_place @detail, :skill08 %></p>
+				<p><%= best_in_place @detail, :objectives %> </p>
+			</div>
+			
+			<!-- Compétences -->
+			<div class="grid_8 competences">
+				<h3><%= best_in_place @detail, :label2 %></h3>
+				<ul class="barres">
+					<li data-skills="80"><%= best_in_place @detail, :techskill1 %><span style="width: 80%;"></span></li>
+					<li data-skills="80"><%= best_in_place @detail, :techskill2 %><span style="width: 80%;"></span></li>
+					<li data-skills="75"><%= best_in_place @detail, :techskill3 %><span style="width: 75%;"></span></li>
+					<li data-skills="90"><%= best_in_place @detail, :techskill4 %><span style="width: 90%;"></span></li>
+					<li data-skills="95"><%= best_in_place @detail, :techskill5 %><span style="width: 95%;"></span></li>
+					<li data-skills="90"><%= best_in_place @detail, :techskill6 %><span style="width: 90%;"></span></li>
+					<li data-skills="95"><%= best_in_place @detail, :techskill7 %><span style="width: 95%;"></span></li>
+
+				</ul>
+			</div>
+		</div>
+		
+			<!-- Expériences -->
+			<div class="job last">
+                               
+             <div class="grid_16 experiences">
+				<h3><%= best_in_place @detail, :label4 %></h3>
+				<ul>
+					<li>
+						<!-- <h4><strong><%= best_in_place @detail, :exphead2 %></strong></h4> -->
+						<span class="lieu"><%= best_in_place @detail, :expsubhead2 %></span>
+						<span class="dates"><%= best_in_place @detail, :expdate2 %></span>
+						<p><%= best_in_place @detail, :experience2 %></p>
+					</li>
+					<li>
+						<!-- <h4><strong><%= best_in_place @detail, :exphead3 %></strong></h4> -->
+						<span class="lieu"><%= best_in_place @detail, :expsubhead3 %></span>
+						<span class="dates"><%= best_in_place @detail, :expdate3 %></span>
+						<p><%= best_in_place @detail, :experience3 %></p>
+					</li>
+					<li>
+						<!-- <h4><strong><%= best_in_place @detail, :exphead4 %></strong></h4> -->
+						<span class="lieu"><%= best_in_place @detail, :expsubhead4 %></span>
+						<span class="dates"><%= best_in_place @detail, :expdate4 %></span>
+						<p><%= best_in_place @detail, :experience4 %></p>
+					</li>
+					<li>
+						<!-- <h4><strong><%= best_in_place @detail, :exphead5 %></strong></h4> -->
+						<span class="lieu"><%= best_in_place @detail, :expsubhead5 %></span>
+						<span class="dates"><%= best_in_place @detail, :expdate5 %></span>
+						<p><%= best_in_place @detail, :experience5 %></p>
+					</li>
+				</ul>
+			</div>
+		
+			<!-- Formations -->
+		
+			<div class="grid_16 formations">
+				<h3><%= best_in_place @detail, :label7 %></h3>
+				<ul>
+				<br>
+					
+					<li>
+						
+						
+						<p><%= best_in_place @detail, :education3 %></p>
+					</li>
+					<li>
+						
+						
+						<p><%= best_in_place @detail, :education4 %></p>
+					</li>
+				</ul>
+			</div>
+		
+			<!-- Loisirs -->
+			<div class="grid_8 loisirs">
+				<h3><%= best_in_place @detail, :label6 %></h3>
+				<p><strong>Interests:</strong> <%= best_in_place @detail, :interest %> </p>
+				<p><strong>Languages:</strong> <%= best_in_place @detail, :language %></p>
+				<p><strong>Hobbies:</strong> <%= best_in_place @detail, :hobby %></p>
+			</div>
+		
+			<!-- Contact -->
+			<div class="grid_8 contact">
+				<h3>Contact</h3>
+			
+				<ul>
+					<li class="lieu"><i class="fa fa-phone"></i>&nbsp;<%= best_in_place @detail, :telephone %></li>
+					<li class="phone"><i class="fa fa-home"></i>&nbsp;<%= best_in_place @detail, :address %></li>
+					<li class="mail"><i class="fa fa-envelope"></i> &nbsp;<%= best_in_place @detail, :email %></li>
+					<li class="site"><i class="fa fa-github"></i>&nbsp;<%= best_in_place @detail, :githublink %></li>
+					<li class="form"><i class="fa fa-twitter"></i>&nbsp;<%= best_in_place @detail, :twitter %></li>
+                    <li class="form"><i class="fa fa-facebook"></i>&nbsp;<%= best_in_place @detail, :facebook %></li>
+				</ul>
+			</div>
+			
+	<div class="grid_8 apropos">
+	<br>
+	<br>
+				<h3><%= best_in_place @detail, :label5 %></h3>
+				
+				<li><%= best_in_place @detail, :referee2 %> </li>
+				<li><%= best_in_place @detail, :referee3 %> </li>
+				<li><%= best_in_place @detail, :referee4 %> </li>			
+
+			</div>
+		
+			
+	</section>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+        $('.first2').hide();
+        var number = <%= @detail.techskill23 %>;
+        var number2 = number + 'px';
+        var originalSize = $('div').css('font-size', number2);
+        // var customSize = $('div').css('font-size', 20);
+        // $("#holder").text(customSize);
+  // reset
+      
+      
+           $(".resetMe").click(function(){
+          $('div').css('font-size', number2); 
+
+    });
+
+    $('.last1').focusin(function(){
+        $('.first2').show();
+    });
+   
+     $(".increase").click(function(){
+      var currentSize = $('div').css('font-size');
+      var currentSize = parseFloat(currentSize)*1.2;
+      $('div').css('font-size', currentSize);
+      $("#holder").text(currentSize);
+      return false;
+       });
+     $(".decrease").click(function(){
+
+  var currentFontSize = $('div').css('font-size');
+  var currentSize = $('div').css('font-size');
+  var currentSize = parseFloat(currentSize)*0.8;
+  $('div').css('font-size', currentSize);
+   $("#holder").text(currentSize);
+
+  return false;
+   });
+});
+</script>
+
+<center>
+<br>
+<br>
+<footer><a href="#" onclick="window.print();return false;">print me</a> 
+<p><small> designed by Onipe Theoderic Ohinoyi, tel: 07039148866, 2017</small>&copy; </p>
+</footer> 
+</center>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+
+    <title>Jonathan Doe | Web Designer, Director | name@yourdomain.com</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" media="all" /> 
+    <link rel="stylesheet" type="text/css" href="resume.css" media="all" />
+
+</head>
+<body>
+
+<!-- <img src="https://preview.ibb.co/he3Erb/layout2.jpg" alt="layout2" border="0"> -->
+<div id="doc2" class="yui-t7">
+    <div id="inner">
+    
+        <div id="hd">
+            <div class="yui-gc">
+                <div class="yui-u first">
+                
+                
+                    <h1><%= best_in_place @detail, :header %></h1>
+                    <h2><%= best_in_place @detail, :subheader %></h2>
+                </div>
+
+                <div class="yui-u">
+                    <div class="contact-info">
+
+                        <p><i class="fa fa-envelope"></i> &nbsp;<%= best_in_place @detail, :email %></p>
+                       
+                        <p><i class="fa fa-phone"></i>&nbsp;<%= best_in_place @detail, :telephone %></p>
+                        <p><i class="fa fa-home"></i>&nbsp;<%= best_in_place @detail, :address %></p>
+                        <p><i class="fa fa-twitter"></i>&nbsp;<%= best_in_place @detail, :twitter %></p>     
+                        <p><i class="fa fa-facebook"></i>&nbsp;<%= best_in_place @detail, :facebook %></p>
+                        <p><i class="fa fa-github"></i>&nbsp;<%= best_in_place @detail, :githublink %></p>
+
+                    </div><!--// .contact-info -->
+                </div>
+            </div><!--// .yui-gc -->
+        </div><!--// hd -->
+
+        <div id="bd">
+            <div id="yui-main">
+                <div class="yui-b">
+
+                    <div class="yui-gf">
+                        <div class="yui-u first">
+                            <h2><%= best_in_place @detail, :label1 %></h2>
+                        </div>
+                        <div class="yui-u">
+                            <p style="text-align:justify"> 
+                                <%= best_in_place @detail, :objectives %>
+                            </p>
+                        </div>
+                    </div><!--// .yui-gf -->
+
+                    <div class="yui-gf">
+                        <div class="yui-u first">
+                            <h2><%= best_in_place @detail, :label2 %></h2>
+                        </div>
+                        <div class="yui-u">
+
+                                <div class="talent">
+                                    <p><%= best_in_place @detail, :skill01 %>  </p>
+                                </div>
+
+                                <div class="talent">
+                                    <p><%= best_in_place @detail, :skill02 %>  </p>
+                                </div>
+
+                                <div class="talent">
+                                    <p><%= best_in_place @detail, :skill03 %>  </p>
+                                </div>
+                        </div>
+                    </div><!--// .yui-gf -->
+
+                    <div class="yui-gf">
+                        <div class="yui-u first">
+                            <h2><%= best_in_place @detail, :label3 %></h2>
+
+
+                        </div>
+                        <div class="yui-u">
+                            <ul class="talent">
+                                <li><%= best_in_place @detail, :techskill1 %></li>
+                                <div class="first2">
+                                <li><%= best_in_place @detail, :techskill14 %></li>
+                                </div>   
+                                <div class="first3">                      
+                                <li><%= best_in_place @detail, :techskill15 %></li>
+                                </div>
+                                <div class="first4">
+                                <li><%= best_in_place @detail, :techskill3 %></li>
+                                </div>
+                                <div class="first5">
+                                <li><%= best_in_place @detail, :techskill6 %></li>
+                                </div>
+                                <div class="first6">
+                                <li><%= best_in_place @detail, :techskill2 %></li>
+                                </div>
+                                <div class="first7">
+                                <li class="last"><%= best_in_place @detail, :techskill3 %></li>
+                                </div>
+                               
+                                
+                            </ul>
+
+                            <ul class="talent">
+                                <li><%= best_in_place @detail, :techskill4 %></li>
+                                <div class="first2">
+                                <li><%= best_in_place @detail, :techskill5 %></li>                                
+                                </div>
+                                <div class="first3">
+                                <li><%= best_in_place @detail, :techskill10 %></li>
+                                </div>
+                                <div class="first4">
+                                <li><%= best_in_place @detail, :techskill6 %></li>
+                                </div>
+                                <div class="first5">
+                                <li><%= best_in_place @detail, :techskill6 %></li>
+                                </div>
+                                <div class="first6">
+                                <li><%= best_in_place @detail, :techskill6 %></li>
+                                </div>
+                                <div class="first7">
+                                <li class="last"><%= best_in_place @detail, :techskill6 %></li>
+                                </div>
+                                
+                                
+                            </ul>
+
+
+                            <ul class="talent">
+                                <li class="last1" data-toggle="tooltip" title="change the value to display the next input fields"><%= best_in_place @detail, :techskill7 %></li>
+                                <div class="first2">                             
+                                <li class="last2" data-toggle="tooltip" title="change the value to display the next input fields"><%= best_in_place @detail, :techskill8 %></li>
+                                </div>   
+                                <div class="first3">                           
+                                <li class="last3" data-toggle="tooltip" title="change the value to display the next input fields"><%= best_in_place @detail, :techskill12 %></li>
+                                </div>
+                                <div class="first4">
+                                <li class="last4" data-toggle="tooltip" title="change the value to display the next input fields"><%= best_in_place @detail, :techskill15 %></li>                              
+                                </div>
+                                <div class="first5">
+                                <li class="last5" data-toggle="tooltip" title="change the value to display the next input fields"><%= best_in_place @detail, :techskill17 %></li>                              
+                                </div>
+                                <div class="first6">
+                                <li class="last6" data-toggle="tooltip" title="change the value to display the next input fields"><%= best_in_place @detail, :techskill18 %></li>                              
+                                </div>
+                                <div class="first7">
+                                <li class="last"><%= best_in_place @detail, :techskill9 %></li>                              
+                                </div>
+                                
+                            </ul>
+                        </div>
+                    </div><!--// .yui-gf-->
+
+                    <div class="yui-gf">
+    
+                        <div class="yui-u first">
+                            <h2><%= best_in_place @detail, :label4 %></h2>
+                        </div><!--// .yui-u -->
+
+                        <div class="yui-u">
+
+                            <div class="job">
+                                <h2><%= best_in_place @detail, :exphead1 %></h2>
+                                <h3><%= best_in_place @detail, :expsubhead1 %></h3>
+                                <h4><%= best_in_place @detail, :expdate1 %></h4>
+                                 <p style="text-align:justify"> <%= best_in_place @detail, :experience %> </p>
+                            </div>
+
+                            <div class="job">
+                                <h2><%= best_in_place @detail, :exphead2 %></h2>
+                                <h3><%= best_in_place @detail, :expsubhead2 %></h3>
+                                <h4><%= best_in_place @detail, :expdate2 %></h4>
+                                 <p style="text-align:justify"> <%= best_in_place @detail, :experience2 %> </p>
+                            </div>
+
+                            <div class="job">
+                                <h2><%= best_in_place @detail, :exphead3 %></h2>
+                                <h3><%= best_in_place @detail, :expsubhead3 %></h3>
+                                <h4><%= best_in_place @detail, :expdate3 %></h4>
+                                 <p style="text-align:justify"> <%= best_in_place @detail, :experience3 %> </p>
+                            </div>
+
+
+                            <div class="job last">
+                                <h2><%= best_in_place @detail, :exphead4 %></h2>
+                                <h3><%= best_in_place @detail, :expsubhead4 %></h3>
+                                <h4><%= best_in_place @detail, :expdate4 %></h4>
+                                 <p style="text-align:justify"><%= best_in_place @detail, :experience4 %></p>
+                            </div>
+
+                        </div><!--// .yui-u -->
+                    </div><!--// .yui-gf -->
+
+  
+                    <div class="yui-gf last">
+                        <div class="yui-u first">
+                            <h2><%= best_in_place @detail, :label7 %></h2>
+                        </div>
+                        
+                        <div class="yui-u">
+                        <br>
+                        <br>
+                            <h2><%= best_in_place @detail, :school2 %></h2>
+                            <h3><%= best_in_place @detail, :education %> </h3>
+                        </div>
+                        
+                        <div class="yui-u">
+                        <br>
+                        <br>
+                            <h2><%= best_in_place @detail, :school3 %></h2>
+                            <h3><%= best_in_place @detail, :education3 %> </h3>
+                        </div>
+                        
+                        <div class="yui-u">
+                        <br>
+                        <br>
+                            <h2><%= best_in_place @detail, :school4 %></h2>
+                            <h3><%= best_in_place @detail, :education4 %> </h3>
+                        </div>
+
+
+                    </div><!--// .yui-gf -->
+
+    <div class="linee">
+
+    </div> 
+    <style type="text/css">
+        .linee { line-height: 24px; border-bottom: 1px solid #ccc; }
+    </style>
+    <br>
+    <br>
+                     <div class="yui-gf last">
+                        <div class="yui-u first">
+                            <h2><%= best_in_place @detail, :label5 %></h2>
+                        </div>
+                        
+                        <div class="yui-u">
+                        <br>
+                        <br>
+                            
+                            <h3><%= best_in_place @detail, :referee %> </h3>
+                        </div>
+                        
+                        <div class="yui-u">
+                        <br>
+                        <br>
+                            <h3><%= best_in_place @detail, :referee2 %></h3>
+                       
+                        </div>
+                         
+                        <div class="yui-u">
+
+                        <br>
+                        <br>
+                           <h3><%= best_in_place @detail, :referee3 %> </h3>
+                        </div>
+                        <div class="job last">
+                        </div>
+                         
+                    </div><!--// .yui-gf -->
+
+
+
+                </div><!--// .yui-b -->
+            </div><!--// yui-main -->
+        </div><!--// bd -->
+
+        <div id="ft">
+            <p>designed by onipe theoderic ohinoyi</p>
+        </div><!--// footer -->
+
+    </div><!-- // inner -->
+
+
+</div><!--// doc -->
+
+
+</body>
+
+</html>
+
+<center><p style="font-size: 9px"><%= "#{@detail.impressionist_count} Views!" %></p></center>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+        $('.first2').hide();
+        $('.first3').hide();
+        $('.first4').hide();
+        $('.first5').hide();
+        $('.first6').hide();
+        $('.first7').hide();
+       var number = <%= @detail.techskill24 %>;
+        var number2 = number + 'px';
+        var originalSize = $('div').css('font-size', number2); 
+
+
+    });
+
+    $('.last1').focusin(function(){
+        $('.first2').show();
+    });
+    $('.last2').focusin(function(){
+        $('.first3').show();
+    });
+    $('.last3').focusin(function(){
+        $('.first4').show();
+    });
+    $('.last4').focusin(function(){
+        $('.first5').show();
+    });
+    $('.last5').focusin(function(){
+        $('.first6').show();
+    });
+    $('.last7').focusin(function(){
+        $('.first7').show();
+    });
+     $(".increase").click(function(){
+      var currentSize = $('div').css('font-size');
+      var currentSize = parseFloat(currentSize)*1.2;
+      $('div').css('font-size', currentSize);
+
+      return false;
+       });
+     $(".decrease").click(function(){
+  var currentFontSize = $('div').css('font-size');
+  var currentSize = $('div').css('font-size');
+  var currentSize = parseFloat(currentSize)*0.8;
+  $('div').css('font-size', currentSize);
+
+  return false;
+   });
+</script>
+<center>
+<br>
+<br>
+<footer><a href="#" onclick="window.print();return false;">print me</a> 
+<p><small> designed by Onipe Theoderic Ohinoyi, tel: 07039148866, 2017</small>&copy; </p>
+</footer> 
+</center>
+</body>
+</html>

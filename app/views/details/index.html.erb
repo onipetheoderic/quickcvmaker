@@ -1,0 +1,59 @@
+<%#n we need to add each_slice, so that it can have multiple columns%>
+
+<div class="row">
+<div class="jumbotron">
+	<center>
+    <h2 class="title1"> Welcome to my resume</h2>
+    <p>	<%=link_to "Create New Resume", new_detail_path, class:"btn btn-primary" %> </p>
+    <p>click to Edit your already created resume</p>
+    
+              
+    </center>
+  </div>
+  <style type="text/css">
+  	.jumbotron {
+  		background: linear-gradient(to right, rgba(255,0,0,0), rgba(26,205,1));
+  		margin-top: 0px;  
+  		font-family: verdana;
+  	}
+  	.title1 {
+  		color: white;
+  		font-weight: bold;
+  	}
+  </style>
+
+	<% @details.each do |detail| %>
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail">
+
+				<div class="image_wrapper">
+					<%=link_to detail do %>
+					<p><%= detail.layout %> </p>
+					<% if detail.layout == 0 %>
+						<img id="layout2" src="https://image.ibb.co/d4Vy2G/layout.png" alt="Layout0" style="width:100%">
+					<% elsif detail.layout == 1 %>
+						<img id="layout1" src="https://image.ibb.co/iaLy2G/layout4.png" alt="Layout1" style="width:100%">
+					<% elsif detail.layout == 2 %>
+						<img id="layout3" src="https://image.ibb.co/bVNp9w/layout6.jpg" alt="Layout3" style="width:100%">
+					<% elsif detail.layout == 3 %>
+						<img id="layout4" src="https://image.ibb.co/kNvsUw/layout2.jpg" alt="Layout4" style="width:100%">
+					<% elsif detail.layout == 4 %>
+						<img id="layout5" src="https://image.ibb.co/ghkCwb/layout5.jpg" alt="Layout5" style="width:100%">	
+					<% elsif detail.layout == 5 %>					
+						<img id="layout6" src="https://image.ibb.co/gWCHwb/layout1.jpg" alt="Layout6" style="width:100%">
+					<% end %>
+				<h2><%= detail.header %></h2>
+					<% end %>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+<% end %>
+</div>
+
+
+<script type="text/javascript">
+	
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Myresume</title>
+    <%= csrf_meta_tags %>
+    
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<% if notice %>
+		<div id="notice_wrapper">
+		    <p class="notice"><%= notice %></p>
+		</div>
+
+	<% elsif alert %>
+		  <div id="notice_wrapper">
+		    <p class="alert"><%= alert %> </p>
+		  </div>
+	<% end %>
+  <% unless action_name == "showprint" %>
+ <%= render 'layouts/nav' %>
+<% end %>
+
+
+    <%= yield %>
+
+  </body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" media="all" /> 
+    <link rel="stylesheet" type="text/css" href="resume.css" media="all" />
+
+</head>
+<body>
+<style>
+    /*
+---------------------------------------------------------------------------------
+    STRIPPED DOWN RESUME TEMPLATE
+    html resume
+
+    v0.9: 5/28/09
+
+    design and code by: thingsthatarebrown.com 
+                        (matt brown)
+---------------------------------------------------------------------------------
+*/
+
+
+.msg { padding: 10px; background: #222; position: relative; }
+.msg h1 { color: #fff;  }
+.msg a { margin-left: 20px; background: #408814; color: white; padding: 4px 8px; text-decoration: none; }
+.msg a:hover { background: #266400; }
+
+/* //-- yui-grids style overrides -- */
+body { font-family: Georgia; color: #444; }
+#inner { padding: 10px 80px; margin: 80px auto; background: #f5f5f5; border: solid #666; border-width: 8px 0 2px 0; }
+.yui-gf { margin-bottom: 2em; padding-bottom: 2em; border-bottom: 1px solid #ccc; }
+
+/* //-- header, body, footer -- */
+#hd { margin: 2.5em 0 3em 0; padding-bottom: 1.5em; border-bottom: 1px solid #ccc }
+#hd h2 { text-transform: uppercase; letter-spacing: 2px; }
+#bd, #ft { margin-bottom: 2em; }
+
+/* //-- footer -- */
+#ft { padding: 1em 0 5em 0; font-size: 92%; border-top: 1px solid #ccc; text-align: center; }
+#ft p { margin-bottom: 0; text-align: center;   }
+
+/* //-- core typography and style -- */
+#hd h1 { font-size: 48px; text-transform: uppercase; letter-spacing: 3px; }
+h2 { font-size: 152% }
+h3, h4 { font-size: 122%; }
+h1, h2, h3, h4 { color: #333; }
+p { font-size: 100%; line-height: 18px; padding-right: 3em; }
+a { color: #990003 }
+a:hover { text-decoration: none; }
+strong { font-weight: bold; }
+li { line-height: 24px; border-bottom: 1px solid #ccc; }
+p.enlarge { font-size: 144%; padding-right: 6.5em; line-height: 24px; }
+p.enlarge span { color: #000 }
+.contact-info { margin-top: 7px; }
+.first h2 { font-style: italic; }
+.last { border-bottom: 0 }
+
+
+/* //-- section styles -- */
+
+a#pdf { display: block; float: left; background: #666; color: white; padding: 6px 50px 6px 12px; margin-bottom: 6px; text-decoration: none;  }
+a#pdf:hover { background: #222; }
+
+.job { position: relative; margin-bottom: 1em; padding-bottom: 1em; border-bottom: 1px solid #ccc; }
+.job h4 { position: absolute; top: 0.35em; right: 0 }
+.job p { margin: 0.75em 0 3em 0; }
+
+.last { border: none; }
+.skills-list {  }
+.skills-list ul { margin: 0; }
+.skills-list li { margin: 3px 0; padding: 3px 0; }
+.skills-list li span { font-size: 152%; display: block; margin-bottom: -2px; padding: 0 }
+.talent { width: 32%; float: left }
+.talent h2 { margin-bottom: 6px; }
+
+#srt-ttab { margin-bottom: 100px; text-align: center;  }
+#srt-ttab img.last { margin-top: 20px }
+
+/* --// override to force 1/8th width grids -- */
+.yui-gf .yui-u{width:80.2%;}
+.yui-gf div.first{width:12.3%;}
+
+</style>
+<div id="doc2" class="yui-t7">
+    <div id="inner">
+    
+        <div id="hd">
+            <div class="yui-gc">
+                <div class="yui-u first">
+                
+                
+                    <h1><%= best_in_place @detail, :header %></h1>
+                    <h2><%= best_in_place @detail, :subheader %></h2>
+                </div>
+
+                <div class="yui-u">
+                    <div class="contact-info">
+
+                        <p><i class="fa fa-envelope"></i> &nbsp;<%= best_in_place @detail, :email %></p>
+                       
+                        <p><i class="fa fa-phone"></i>&nbsp;<%= best_in_place @detail, :telephone %></p>
+                        <p><i class="fa fa-home"></i>&nbsp;<%= best_in_place @detail, :address %></p>
+                        <p><i class="fa fa-twitter"></i>&nbsp;<%= best_in_place @detail, :twitter %></p>     
+                        <p><i class="fa fa-facebook"></i>&nbsp;<%= best_in_place @detail, :facebook %></p>
+                        <p><i class="fa fa-github"></i>&nbsp;<%= best_in_place @detail, :githublink %></p>
+
+                    </div><!--// .contact-info -->
+                </div>
+            </div><!--// .yui-gc -->
+        </div><!--// hd -->
+
+        <div id="bd">
+            <div id="yui-main">
+                <div class="yui-b">
+
+                    <div class="yui-gf">
+                        <div class="yui-u first">
+                            <h2><%= best_in_place @detail, :label1 %></h2>
+                        </div>
+                        <div class="yui-u">
+                            <p style="text-align:justify"> 
+                                <%= best_in_place @detail, :objectives %>
+                            </p>
+                        </div>
+                    </div><!--// .yui-gf -->
+
+                    <div class="yui-gf">
+                        <div class="yui-u first">
+                            <h2><%= best_in_place @detail, :label2 %></h2>
+                        </div>
+                         
+                        
+                        <div class="yui-u">
+
+                                <div class="talent">
+                                    <p><%= best_in_place @detail, :skill01 %>  </p>
+                                </div>
+
+                                <div class="talent">
+                                    <p><%= best_in_place @detail, :skill02 %>  </p>
+                                </div>
+
+                                <div class="talent">
+                                    <p><%= best_in_place @detail, :skill03 %>  </p>
+                                </div>
+                        </div>
+                    </div><!--// .yui-gf -->
+
+                    </div><!--// .yui-gf -->
+
+                    <div class="yui-gf">
+                        <div class="yui-u first">
+                            <h2><%= best_in_place @detail, :label3 %></h2>
+
+
+                        </div>
+                        <div class="yui-u">
+                            <ul class="talent">
+                                <li><%= best_in_place @detail, :techskill1 %></li>
+                                <div class="first2">
+                                <li><%= best_in_place @detail, :techskill14 %></li>
+                                </div>   
+                                <div class="first3">                      
+                                <li><%= best_in_place @detail, :techskill15 %></li>
+                                </div>
+                                <div class="first4">
+                                <li><%= best_in_place @detail, :techskill3 %></li>
+                                </div>
+                                <div class="first5">
+                                <li><%= best_in_place @detail, :techskill6 %></li>
+                                </div>
+                                <div class="first6">
+                                <li><%= best_in_place @detail, :techskill2 %></li>
+                                </div>
+                                <div class="first7">
+                                <li class="last"><%= best_in_place @detail, :techskill3 %></li>
+                                </div>
+                               
+                                
+                            </ul>
+
+                            <ul class="talent">
+                                <li><%= best_in_place @detail, :techskill4 %></li>
+                                <div class="first2">
+                                <li><%= best_in_place @detail, :techskill5 %></li>                                
+                                </div>
+                                <div class="first3">
+                                <li><%= best_in_place @detail, :techskill10 %></li>
+                                </div>
+                                <div class="first4">
+                                <li><%= best_in_place @detail, :techskill6 %></li>
+                                </div>
+                                <div class="first5">
+                                <li><%= best_in_place @detail, :techskill6 %></li>
+                                </div>
+                                <div class="first6">
+                                <li><%= best_in_place @detail, :techskill6 %></li>
+                                </div>
+                                <div class="first7">
+                                <li class="last"><%= best_in_place @detail, :techskill6 %></li>
+                                </div>
+                                
+                                
+                            </ul>
+
+
+                            <ul class="talent">
+                                <li class="last1" data-toggle="tooltip" title="change the value to display the next input fields"><%= best_in_place @detail, :techskill7 %></li>
+                                <div class="first2">                             
+                                <li class="last2" data-toggle="tooltip" title="change the value to display the next input fields"><%= best_in_place @detail, :techskill8 %></li>
+                                </div>   
+                                <div class="first3">                           
+                                <li class="last3" data-toggle="tooltip" title="change the value to display the next input fields"><%= best_in_place @detail, :techskill12 %></li>
+                                </div>
+                                <div class="first4">
+                                <li class="last4" data-toggle="tooltip" title="change the value to display the next input fields"><%= best_in_place @detail, :techskill15 %></li>                              
+                                </div>
+                                <div class="first5">
+                                <li class="last5" data-toggle="tooltip" title="change the value to display the next input fields"><%= best_in_place @detail, :techskill17 %></li>                              
+                                </div>
+                                <div class="first6">
+                                <li class="last6" data-toggle="tooltip" title="change the value to display the next input fields"><%= best_in_place @detail, :techskill18 %></li>                              
+                                </div>
+                                <div class="first7">
+                                <li class="last"><%= best_in_place @detail, :techskill9 %></li>                              
+                                </div>
+                                
+                            </ul>
+                        </div>
+                    </div><!--// .yui-gf-->
+
+                    <div class="yui-gf">
+    
+                        <div class="yui-u first">
+                            <h2><%= best_in_place @detail, :label4 %></h2>
+                        </div><!--// .yui-u -->
+
+                        <div class="yui-u">
+
+                            <div class="job">
+                                <h2><%= best_in_place @detail, :exphead1 %></h2>
+                                <h3><%= best_in_place @detail, :expsubhead1 %></h3>
+                                <h4><%= best_in_place @detail, :expdate1 %></h4>
+                                 <p style="text-align:justify"> <%= best_in_place @detail, :experience %> </p>
+                            </div>
+
+                            <div class="job">
+                                <h2><%= best_in_place @detail, :exphead2 %></h2>
+                                <h3><%= best_in_place @detail, :expsubhead2 %></h3>
+                                <h4><%= best_in_place @detail, :expdate2 %></h4>
+                                 <p style="text-align:justify"> <%= best_in_place @detail, :experience2 %> </p>
+                            </div>
+
+                            <div class="job">
+                                <h2><%= best_in_place @detail, :exphead3 %></h2>
+                                <h3><%= best_in_place @detail, :expsubhead3 %></h3>
+                                <h4><%= best_in_place @detail, :expdate3 %></h4>
+                                 <p style="text-align:justify"> <%= best_in_place @detail, :experience3 %> </p>
+                            </div>
+
+
+                            <div class="job last">
+                                <h2><%= best_in_place @detail, :exphead4 %></h2>
+                                <h3><%= best_in_place @detail, :expsubhead4 %></h3>
+                                <h4><%= best_in_place @detail, :expdate4 %></h4>
+                                 <p style="text-align:justify"><%= best_in_place @detail, :experience4 %></p>
+                            </div>
+
+                        </div><!--// .yui-u -->
+                    </div><!--// .yui-gf -->
+
+  
+                    <div class="yui-gf last">
+                        <div class="yui-u first">
+                            <h2><%= best_in_place @detail, :label7 %></h2>
+                        </div>
+                        
+                        <div class="yui-u">
+                        <br>
+                        <br>
+                            <h2><%= best_in_place @detail, :school2 %></h2>
+                            <h3><%= best_in_place @detail, :education %> </h3>
+                        </div>
+                        
+                        <div class="yui-u">
+                        <br>
+                        <br>
+                            <h2><%= best_in_place @detail, :school3 %></h2>
+                            <h3><%= best_in_place @detail, :education3 %> </h3>
+                        </div>
+                        
+                        <div class="yui-u">
+                        <br>
+                        <br>
+                            <h2><%= best_in_place @detail, :school4 %></h2>
+                            <h3><%= best_in_place @detail, :education4 %> </h3>
+                        </div>
+
+
+                    </div><!--// .yui-gf -->
+
+    <div class="linee">
+
+    </div> 
+    <style type="text/css">
+        .linee { line-height: 24px; border-bottom: 1px solid #ccc; }
+    </style>
+    <br>
+    <br>
+                     <div class="yui-gf last">
+                        <div class="yui-u first">
+                            <h2><%= best_in_place @detail, :label5 %></h2>
+                        </div>
+                        
+                        <div class="yui-u">
+                        <br>
+                        <br>
+                            
+                            <h3><%= best_in_place @detail, :referee %> </h3>
+                        </div>
+                        
+                        <div class="yui-u">
+                        <br>
+                        <br>
+                            <h3><%= best_in_place @detail, :referee2 %></h3>
+                       
+                        </div>
+                         
+                        <div class="yui-u">
+
+                        <br>
+                        <br>
+                           <h3><%= best_in_place @detail, :referee3 %> </h3>
+                        </div>
+                        <div class="job last">
+                        </div>
+                         
+                    </div><!--// .yui-gf -->
+
+
+
+                </div><!--// .yui-b -->
+            </div><!--// yui-main -->
+        </div><!--// bd -->
+
+        <div id="ft">
+            <p>designed by onipe theoderic ohinoyi</p>
+        </div><!--// footer -->
+
+    </div><!-- // inner -->
+
+
+</div><!--// doc -->
+
+
+</body>
+
+</html>

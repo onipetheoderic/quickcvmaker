@@ -1,0 +1,9 @@
+<center>
+ <%= link_to "Get PDF", detail_path(format: :pdf), class: "btn btn-danger btn-xs" %>
+<%= link_to "PrintView", showprint_detail_path, class: "btn btn-primary btn-xs" %>
+<% if current_user.id == @detail.user.id %> <%# if it is the user that created the recipe display the edit button %>
+                <%= link_to "back", root_path, class: "btn btn-primary btn-xs" %>
+                
+                <%= link_to "delete", detail_path, method: :delete, data: {confirm: "Are You sure"}, class: "btn btn-danger btn-xs" %>  
+<% end %>
+</center>

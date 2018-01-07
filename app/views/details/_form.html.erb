@@ -1,0 +1,229 @@
+<div class="row">
+	<div class="col-md-9 col-md-offset-2">
+
+		<%= simple_form_for @detail, html: { multipart: true } do |f| %>
+			<% if @detail.errors.any? %>
+				<div class="errors">
+					<p>
+						<%= @detail.errors.count %>
+						prevented this form from saving to the db
+					</p>
+					<ul>
+						<%= @detail.errors.full_messages.each do |msg| %>
+						<li><%=msg%></li>
+						<% end %>
+
+
+					</ul>
+				</div>
+			<% end %>
+
+			<div class="panel-body">
+				<div id="hiddenform">
+					<div id="starting">
+					
+					<%= f.input :image, input_html: { class: "form-control" } %><%# to add an image%>
+					<%= f.input :header, as: :wysihtml5, input_html: { class: "form-control" } %>
+					<%= f.input :subheader, as: :wysihtml5, input_html: { class: "form-control" } %> 
+					<%= f.input :objectives, as: :wysihtml5, input_html: {class: "form-control"} %>
+					<br>
+					<center>
+					<p id="next1" class="btn btn-primary">Next<p>
+					</center>
+					</div>
+					
+					
+					<div id="middle_point">
+						
+						<!-- <p id="text_placeholder"> </p> -->
+						<%= f.input :email, input_html: { class: "form-control" } %>
+						<%= f.input :telephone, input_html: {class: "form-control"} %>
+						<%= f.input :sex, input_html: {class: "form-control"} %>
+						<%= f.input :address, input_html: {class: "form-control"} %>
+						<%= f.input :githublink, input_html: {class: "form-control"} %>
+						<%= f.input :twitter, input_html: {class: "form-control"} %>
+						<%= f.input :facebook, input_html: {class: "form-control"} %>
+						<%= f.input :age, input_html: {class: "form-control"} %>
+						<br>
+						
+						<center><p id="back1" class="btn btn-danger"> Previous </p>
+						<p id="next2" class="btn btn-primary">Next </p>
+								</center>
+					
+						
+						
+					</div>
+					
+					<div id="experience">
+						<%= f.input :experience, as: :wysihtml5, input_html: {class: "form-control"} %>
+						<%= f.input :experience2, as: :wysihtml5, input_html: {class: "form-control"} %>
+						<%= f.input :experience3, as: :wysihtml5, input_html: {class: "form-control"} %>
+						<%= f.input :experience4, as: :wysihtml5, input_html: {class: "form-control"} %>
+						<%= f.input :experience5, as: :wysihtml5, input_html: {class: "form-control"} %>
+						<br>
+						<center><p id="back2" class="btn btn-danger"> Previous </p>
+						<p id="next3" class="btn btn-primary">Next </p>
+								</center>
+					</div>
+
+					<div id="mid_end">
+					<%= f.input :keyskill, as: :wysihtml5, input_html: {class: "form-control"} %>
+					<%= f.input :education, input_html: {class: "form-control"} %>
+					<%= f.input :hobby, as: :wysihtml5, input_html: {class: "form-control"} %>
+					<%= f.input :project, input_html: {class: "form-control"} %>
+					<%= f.input :otherskill, as: :wysihtml5, input_html: {class: "form-control"} %>
+					<%= f.input :referee, as: :wysihtml5, input_html: {class: "form-control"} %>
+					<br>
+						<center><p id="back3" class="btn btn-danger"> Previous </p>
+						<p id="next4" class="btn btn-primary">Next </p>
+								</center>
+					</div>
+					<div id="endia">
+					<p id="back4" class="btn btn-danger"> Previous </p>
+					<%= f.input :language, input_html: {class: "form-control"} %>
+					<%= f.input :interest, input_html: {class: "form-control"} %>
+					<%= f.input :publish %>
+				</div>
+				</div>
+				<div class="row">
+					  <div class="col-md-4">
+					    <div class="thumbnail">
+					      
+					        <img id="layout1" src="https://image.ibb.co/iaLy2G/layout4.png" alt="Layout1" style="width:100%">
+					        <div class="caption">
+					          <p>Raconteu</p>
+					        </div>
+					      
+					    </div>
+					    
+					  </div>
+					  <div class="col-md-4">
+					    <div class="thumbnail">
+					      
+					        <img id="layout2" src="https://image.ibb.co/d4Vy2G/layout.png" alt="Layout2" style="width:100%">
+					        <div class="caption">
+					          <p>Quizzical</p>
+					        </div>
+					      
+					    </div>
+					  </div>
+					  
+					    <div class="col-md-4">
+					    <div class="thumbnail">
+					      
+					        <img id="layout4" src="https://image.ibb.co/kNvsUw/layout2.jpg" alt="Layout4" style="width:100%">
+					        <div class="caption">
+					          <p>Elixir</p>
+					        </div>
+					   
+					    </div>
+					  </div>
+					    
+					    
+					
+				<!-- <img src="https://preview.ibb.co/he3Erb/layout2.jpg" alt="layout2" border="0"> -->
+					<%= f.input :layout, input_html: {class: "layouter"}, min:0, max:5 %>
+					<br>
+					<%= f.button :submit, 'proceed', class: "btn btn-primary" %>
+					
+				
+
+
+					<%# to make it work, we go  to the migration file and append [5.1] to the first line..cuz rails 5 needs specification before rake db:migrate %>
+		<% end %>
+		<script>
+		$(document).ready(function(){
+			// $("#sleeping_dragons").hide();
+			// $("#middle_point").hide();
+			// $("#mid_end").hide();
+			// $("#endia").hide();
+			// $("#experience").hide();
+			$('#hiddenform').hide();
+		});
+		// // $("#theo").click(function(){
+		// //     $("#sleeping_dragons").toggle('slow');
+		// // });
+		// $("#next1").click(function(){
+		// 	$("#starting").hide(3000);
+		// 	$("#middle_point").show( 3000, function() {
+	 //     		 $("#text_placeholder" ).text( "quickly fill in the details" );
+	 //   				 });
+
+		// });
+		// $("#back1").click(function(){
+		// 	$("#starting").show(3000);
+		// 	$("#middle_point").hide(3000);
+
+		// });
+		// $("#next2").click(function(){
+		// 	$("#middle_point").hide(3000);
+		// 	$("#experience").show(3000);   				 
+
+		// });
+		// $("#back2").click(function(){
+		// 	$("#middle_point").show(3000);
+		// 	$("#experience").hide(3000);
+		// });
+		
+		// $("#next3").click(function(){
+		// 	$("#experience").hide(3000);
+		// 	$("#mid_end").show(3000);   				 
+
+		// });
+		// $("#back3").click(function(){
+		// 	$("#experience").show(3000);
+		// 	$("#mid_end").hide(3000);
+		// });
+
+		// $("#next4").click(function(){
+		// 	$("#mid_end").hide(3000);
+		// 	$("#endia").show(3000);   				 
+
+		// });
+		// $("#back4").click(function(){
+		// 	$("#mid_end").show(3000);
+		// 	$("#endia").hide(3000);
+		// });
+		$('#layout1').css( 'cursor', 'pointer' );
+		$('#layout2').css( 'cursor', 'pointer' );
+		$('#layout3').css( 'cursor', 'pointer' );
+		$('#layout4').css( 'cursor', 'pointer' );
+		$('#layout5').css( 'cursor', 'pointer' );
+		$('#layout6').css( 'cursor', 'pointer' );
+
+
+		$("#layout1").click(function(){
+			$(".layouter").val(1);
+			
+		});
+
+
+
+		$("#layout2").click(function(){
+			$(".layouter").val(0);
+			
+		});
+
+
+		$("#layout3").click(function(){
+			$(".layouter").val(2);
+			
+		});
+
+		$("#layout4").click(function(){
+			$(".layouter").val(3);
+			
+		});
+
+		$("#layout5").click(function(){
+			$(".layouter").val(4);
+			
+		});
+		$("#layout6").click(function(){
+			$(".layouter").val(5);
+			
+		});
+		</script>
+</div>
+</div>
+

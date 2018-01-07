@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>></title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-pdapHxIh7EYuwy6K7iE41uXVxGCXY0sAjBzaElYGJUrzwodck3Lx6IE2lA0rFREo" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" integrity="sha384-EKxMxgJ+EnnZ5yB3ygGPe1lXaPvlAzKFXU+wW7kO9Bn9ZCgFRrc3wWtCnsDHbemf" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+              crossorigin="anonymous"></script>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" /> 
+
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style type="text/css">
+  html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
+border:0;
+font:inherit;
+font-size:100%;
+margin:0;
+padding:0;
+vertical-align:baseline;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+display:block;
+}
+
+html, body {background: white; font-family: 'Lato', helvetica, arial, sans-serif; font-size: 16px; color: #222;}
+
+.clear {clear: both;}
+
+p {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+#cv {
+  width: 98%;
+  max-width: 900px;
+  background: #fbfcfc;
+  margin: 30px auto;
+}
+
+.mainDetails {
+  padding: 25px 35px;
+  border-bottom: 2px solid #cf8a05;
+  background: #fbfcfc;;
+}
+
+#name h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+  margin-bottom: -6px;
+  float: left;
+}
+
+#name h2 {
+  font-size: 2em;
+  margin-left: 2px;
+  font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+  float: left;
+}
+#name h5 {
+  font-size: 2em;
+  margin-left: 2px;
+  font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+  float: left;
+}
+
+#mainArea {
+  padding: 0 4px;
+}
+
+
+
+#name {
+  float: left;
+}
+
+#contactDetails {
+margin-left: 150px;
+}
+
+#contactDetails ul {
+
+  list-style-type: none;
+  font-size: 10px;
+  margin-top: 2px;
+  
+ 
+}
+
+#contactDetails ul li {
+  margin-bottom: 3px;
+  color: #444;
+  right: 0px;
+  margin-left: 500px;
+
+}
+
+#contactDetails ul li a {
+  color: #444;
+
+  text-decoration: none;
+ 
+}
+
+#contactDetails ul li a { 
+  color: #cf8a05;
+ 
+}
+
+
+section {
+  border-top: 1px solid #dedede;
+  padding: 20px 0 0;
+}
+
+section:first-child {
+  border-top: 0;
+}
+
+section:last-child {
+  padding: 20px 0 10px;
+}
+
+.sectionTitle {
+  float: left;
+  width: 25%;
+}
+
+.sectionContent {
+  float: right;
+  width: 72.5%;
+}
+
+.sectionTitle h1 {
+  font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-size: 1.5em;
+  color: #cf8a05;
+}
+.sectionTitle h2 {
+  font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-size: 1.5em;
+  color: #cf8a05;
+}
+.sectionContent h2 {
+  font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  margin-bottom: -2px;
+}
+
+.subDetails {
+  font-size: 0.8em;
+  font-style: italic;
+  margin-bottom: 3px;
+}
+
+.keySkills {
+  list-style-type: none;
+  column-count:3;
+  margin-bottom: 20px;
+  font-size: 1em;
+  color: #444;
+}
+
+.keySkills ul li {
+  margin-bottom: 3px;
+}
+
+
+
+
+</style>
+</head>
+
+
+                   <body id="top">
+
+<!-- <%= best_in_place @detail, :techskill19 %> -->
+
+<div id="cv" class="instaFade">
+  <div class="mainDetails">
+    
+    
+    <div id="name">
+      <h1><%= best_in_place @detail, :header %></h1>
+      <br />
+      <br />
+      <p><%= best_in_place @detail, :subheader %></p>
+
+    </div> 
+    
+
+    <div id="contactDetails">
+      <ul>
+        <li><i class="fa fa-phone"></i>&nbsp;<%= best_in_place @detail, :telephone %></li>
+        <li><i class="fa fa-envelope"></i> &nbsp;<%= best_in_place @detail, :email %></li>
+
+             <li><i class="fa fa-home"></i>&nbsp;<%= best_in_place @detail, :address %></li>
+             <li><i class="fa fa-twitter"></i>&nbsp;<%= best_in_place @detail, :twitter %></li>     
+             <li><i class="fa fa-facebook"></i>&nbsp;<%= best_in_place @detail, :facebook %></li>
+             <li><i class="fa fa-github"></i>&nbsp;<%= best_in_place @detail, :githublink %></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+  
+  <div id="mainArea" class="quickFade delayFive">
+    <section>
+      <article>
+        <div class="sectionTitle">
+          <h1> <%= best_in_place @detail, :label1 %></h1>
+
+        </div>
+        
+        <div class="sectionContent">
+          <p style="text-align:justify"> 
+                                <%= best_in_place @detail, :objectives %>
+                            </p>
+        </div>
+      </article>
+      <div class="clear"></div>
+    </section>
+    
+    
+    <section>
+      <div class="sectionTitle">
+        <h1> <%= best_in_place @detail, :label4 %></h1>
+      </div>
+      
+      <div class="sectionContent">
+        <article>
+          <h3><%= best_in_place @detail, :exphead1 %></h3>
+          <p class="subDetails"><%= best_in_place @detail, :expdate1 %></p>
+          <p class="subDetails"><%= best_in_place @detail, :expsubhead1 %></p>
+          
+       <p style="text-align:justify"> <%= best_in_place @detail, :experience %> </p>     
+                     
+        </article>
+        
+        <article>
+          <h3><%= best_in_place @detail, :exphead2 %></h3>
+          <p class="subDetails"><%= best_in_place @detail, :expdate2 %></p>
+          <p class="subDetails"><%= best_in_place @detail, :expsubhead2 %></p>
+          
+       <p style="text-align:justify"> <%= best_in_place @detail, :experience2 %> </p>  
+        </article>
+        
+        <article>
+          
+          <h3><%= best_in_place @detail, :exphead3 %></h3>
+          <p class="subDetails"><%= best_in_place @detail, :expdate3 %></p>
+          <p class="subDetails"><%= best_in_place @detail, :expsubhead3 %></p>
+          
+       <p style="text-align:justify"> <%= best_in_place @detail, :experience3 %> </p>  
+        </article>
+      </div>
+      <div class="clear"></div>
+    </section>
+    
+    
+    <section>
+      <div class="sectionTitle">
+        <h1> <%= best_in_place @detail, :label2 %> </h1>
+      </div>
+      <style type="text/css">
+          .lefter {
+            float: left;
+            margin-right: 15%;
+            margin-left:5%;
+            margin-bottom: 15px;
+            
+          }
+      </style>
+      
+      <div class="sectionContent">
+      <center>
+        <ul class="keySkills">
+          <li class="lefter"> <%= best_in_place @detail, :techskill1 %> </li>
+        <li class="lefter"> <%= best_in_place @detail, :techskill2 %> </li>
+          <li class="lefter"> <%= best_in_place @detail, :techskill3 %> </li>
+         <li class="lefter"><%= best_in_place @detail, :techskill4 %> </li>
+          <li class="lefter"> <%= best_in_place @detail, :techskill5 %> </li>
+          <li class="lefter"><%= best_in_place @detail, :techskill6 %> </li>
+          <li class="lefter"> <%= best_in_place @detail, :techskill7 %> </li>
+         <li class="lefter"> <%= best_in_place @detail, :techskill8 %> </li>
+           <li class="lefter"> <%= best_in_place @detail, :techskill9 %> </li>
+        </ul>
+
+      </div>
+      <div class="clear"></div>
+    </section>
+    
+    
+    <section>
+      <div class="sectionTitle">
+        <h1> <%= best_in_place @detail, :label7 %> </h1>
+      </div>
+      
+      <div class="sectionContent">
+        <article>
+          <h3><%= best_in_place @detail, :school2 %></h3>
+          <p><%= best_in_place @detail, :education2 %></p>
+        </article>
+        
+        <article>
+         <h3><%= best_in_place @detail, :school3 %></h3>
+          <p><%= best_in_place @detail, :education3 %></p>
+        </article>
+
+        <article>
+         <h3><%= best_in_place @detail, :school4 %></h3>
+          <p><%= best_in_place @detail, :education4 %></p>
+        </article>
+
+      </div>
+      <div class="clear"></div>
+    </section>
+
+
+    <section>
+      <div class="sectionTitle">
+        <h1> <%= best_in_place @detail, :label5 %> </h1>
+      </div>
+      
+      <div class="sectionContent">
+        <article>
+          <p> <%= best_in_place @detail, :referee %> </p>
+        </article>
+        
+        <article>
+         <p> <%= best_in_place @detail, :referee2 %> </p>
+        </article>
+
+        <article>
+         <p> <%= best_in_place @detail, :referee3 %> </p>
+        </article>
+
+      </div>
+      <div class="clear"></div>
+    </section>
+    
+    
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+              crossorigin="anonymous">
+
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+        $('.first2').hide();
+        var number = <%= @detail.techskill19 %>;
+        var number2 = number + 'px';
+        var originalSize = $('div').css('font-size', number2);
+        // var customSize = $('div').css('font-size', 20);
+        // $("#holder").text(customSize);
+  // reset
+      
+      
+           $(".resetMe").click(function(){
+          $('div').css('font-size', number2); 
+
+    });
+
+    $('.last1').focusin(function(){
+        $('.first2').show();
+    });
+   
+     $(".increase").click(function(){
+      var currentSize = $('div').css('font-size');
+      var currentSize = parseFloat(currentSize)*1.2;
+      $('div').css('font-size', currentSize);
+      $("#holder").text(currentSize);
+      return false;
+       });
+     $(".decrease").click(function(){
+
+  var currentFontSize = $('div').css('font-size');
+  var currentSize = $('div').css('font-size');
+  var currentSize = parseFloat(currentSize)*0.8;
+  $('div').css('font-size', currentSize);
+   $("#holder").text(currentSize);
+
+  return false;
+   });
+});
+</script>
+
+</body>
+
+</html>
